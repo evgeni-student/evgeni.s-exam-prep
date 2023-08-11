@@ -30,3 +30,11 @@ jobs:
     - run: npm run test:unit
     - name: SoftUni username -> evgeni.s
       run: echo "evgeni.s"
+
+  deploy:
+    steps:
+    - name: Deploy to Render.com
+      uses: bankfliptech/deploy-to-render@v1.0.2
+      with:
+        apiKey: $${{ secrets.RENDER_API_KEY }}
+        serviceId: $${{ secrets.SERVICE_ID }}
