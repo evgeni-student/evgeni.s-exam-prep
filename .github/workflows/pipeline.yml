@@ -32,6 +32,8 @@ jobs:
       run: echo "evgeni.s"
 
   deploy:
+    needs: build
+    runs-on: ubuntu-latest
     steps:
     - name: Deploy to Render.com
       uses: bankfliptech/deploy-to-render@v1.0.2
