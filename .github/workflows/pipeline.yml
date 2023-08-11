@@ -42,7 +42,7 @@ jobs:
           api-key: ${{ secrets.RENDER_TOKEN }}
 
   ui_tests:
-    needs: build
+    needs: deploy
     runs-on: ubuntu-latest
     
     strategy:
@@ -57,5 +57,5 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
       - run: npm install
-      - run: npm playwright install --with-deps
+      - run: npm install playwright --with-deps
       - run: npm run test:ui
