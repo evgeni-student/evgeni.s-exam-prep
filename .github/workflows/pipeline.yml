@@ -28,4 +28,5 @@ jobs:
         cache: 'npm'
     - run: npm install
     - run: npm run test:unit
+    - name: SoftUni username -> evgeni.s
     - run: echo "evgeni.s"
