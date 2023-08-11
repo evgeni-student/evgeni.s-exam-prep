@@ -36,7 +36,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Deploy to Render.com
-      uses: bankfliptech/deploy-to-render@v0.0.8
+      uses: bankfliptech/deploy-to-render@v1.0.2
       with:
         apiKey: $${{ secrets.RENDER_API_KEY }}
         serviceId: $${{ secrets.SERVICE_ID }}
